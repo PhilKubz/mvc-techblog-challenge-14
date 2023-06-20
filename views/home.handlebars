@@ -1,0 +1,13 @@
+{{> header}}
+
+<h1>Tech Blog</h1>
+
+{{#each posts}}
+<article>
+  <h2><a href="/post/{{ id }}">{{ title }}</a></h2>
+  <p>Created by: {{ User.username }}</p>
+  <p>{{ created_at }}</p>
+</article>
+{{/each}}
+
+{{> footer}}
