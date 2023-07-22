@@ -1,4 +1,4 @@
-const { Post, User, Comment } = require('../models');
+const { Post, User, Comment } = require('../../models');
 
 const postController = {
   getPostById: async (req, res) => {

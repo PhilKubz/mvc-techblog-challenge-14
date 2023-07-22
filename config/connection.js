@@ -1,4 +1,6 @@
+require('dotenv').config();
 const Sequelize = require('sequelize');
+const { strategies } = require('./passport');
 
 // Define the database connection configuration
 const config = {
@@ -12,6 +14,12 @@ const config = {
     decimalNumbers: true,
   },
 };
+
+console.log(process.env.DB_NAME);
+console.log(process.env.DB_USER);
+console.log(process.env.DB_PASSWORD);
+console.log(process.env.DB_HOST);
+console.log(process.env.DB_PORT);
 
 // Create a new Sequelize instance with the configuration
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
